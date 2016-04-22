@@ -7,13 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid Margin="20px 0px">
-        <Button x:Name="button" Content="Nieuwe Toevoegen" HorizontalAlignment="Left" Margin="53,27,0,0" VerticalAlignment="Top" Width="144"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="214" Margin="53,60,0,0" VerticalAlignment="Top" Width="144"/>
+        <Button x:Name="newButton" Content="Nieuwe Toevoegen" HorizontalAlignment="Left" Margin="53,27,0,0" VerticalAlignment="Top" Width="144" Click="newButton_Click"/>
+        <ListBox x:Name="listBox1" 
+                 HorizontalAlignment="Left" Height="214" Margin="53,60,0,0" VerticalAlignment="Top" Width="144" 
+                 SelectionMode="Single" SelectionChanged="listBox1_SelectionChanged"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="249,27,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="365,60,0,0" TextWrapping="Wrap" Text="Achternaam" VerticalAlignment="Top" Width="112"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="365,34,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" Width="112"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="365,87,0,0" TextWrapping="Wrap" Text="DD/MM/YYYY" VerticalAlignment="Top" Width="112"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="131" Margin="249,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218"/>
+        <TextBlock x:Name="voornaamBlock" HorizontalAlignment="Left" Margin="365,60,0,0" TextWrapping="Wrap" Text="Achternaam" VerticalAlignment="Top" Width="112"/>
+        <TextBlock x:Name="achternaamBlock" HorizontalAlignment="Left" Margin="365,34,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" Width="112"/>
+        <TextBlock x:Name="geboorteDatumBlock" HorizontalAlignment="Left" Margin="365,87,0,0" TextWrapping="Wrap" Text="DD/MM/YYYY" VerticalAlignment="Top" Width="112"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="53,274,0,0" VerticalAlignment="Top" Width="144">
+            <ComboBoxItem IsSelected="True">(leeg)</ComboBoxItem>
+            <ComboBoxItem>Algemeen</ComboBoxItem>
+            <ComboBoxItem>Vrienden</ComboBoxItem>
+            <ComboBoxItem>Familie</ComboBoxItem>
+        </ComboBox>
 
     </Grid>
 </Window>
