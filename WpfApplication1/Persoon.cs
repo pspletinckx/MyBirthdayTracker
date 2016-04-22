@@ -23,15 +23,27 @@ namespace WpfApplication1
 
         public String toString()
         {
-            return voornaam + " " + achternaam +" " + getAge()+"j ";
+            return voornaam + " " + achternaam +" " + getNextBirthdayAge()+"j ";
         }
         public int getAge()
         {
             var now = DateTime.Today;
             int age = now.Year - geboortedatum.Year;
-            if (geboortedatum > now.AddYears(-age)) ;
-                age--;
+            if (geboortedatum > now.AddYears(-age))age--;              
             return age;
+        }
+        public int getNextBirthdayAge()
+        {
+            return getAge() + 1;
+        }
+        public DateTime getNextBirthday()
+        {
+            DateTime result = geboortedatum; //struct
+            while(result < DateTime.Now && geboortedatum <DateTime.Now)
+            {
+                result = result.AddYears(1);
+            }
+            return result;
         }
     }
 
