@@ -50,8 +50,9 @@ namespace WpfApplication1
 
         private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (listBox1.SelectedIndex < 0) return;
             int index = listBox1.SelectedIndex;
-            Persoon p = verjaardagen.getFeestvarken(listBox1.SelectedIndex);
+            Persoon p = adapter.getFeestvarken(listBox1.SelectedIndex);
             voornaamBlock.Text = p.voornaam;
             achternaamBlock.Text = p.achternaam;
             geboorteDatumBlock.Text = p.geboortedatum.Day + "/" + p.geboortedatum.Month + "/" + p.geboortedatum.Year;

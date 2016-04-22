@@ -11,10 +11,12 @@ namespace WpfApplication1
     {
         protected ListBox verjaardagen;
         protected IDisposable cancellation;
+        protected List<Persoon> gefilterdeLijst;
 
         public VerjaardagenLijst(ListBox uiLijst)
         {
             this.verjaardagen = uiLijst;
+            gefilterdeLijst = new List<Persoon>();
         }
         public virtual void Subscribe(BirthdayArray provider)
         {
@@ -24,11 +26,13 @@ namespace WpfApplication1
         {
             cancellation.Dispose();
             verjaardagen.Items.Clear();
-            System.Diagnostics.Debug.Write("unsubscribed");
+            gefilterdeLijst.Clear();
+            //System.Diagnostics.Debug.Write("unsubscribed");
         }
         public void OnCompleted()
         {
             verjaardagen.Items.Clear();
+            gefilterdeLijst.Clear();
         }
 
         public void OnError(Exception error)
@@ -39,6 +43,11 @@ namespace WpfApplication1
         public  virtual void OnNext(Persoon value)
         {
             verjaardagen.Items.Add(value.toString());
+            gefilterdeLijst.Add(value);
+        }
+        internal Persoon getFeestvarken(int selectedIndex)
+        {
+            return gefilterdeLijst.ElementAt(selectedIndex);
         }
     }
     class FilterLijst : VerjaardagenLijst {
@@ -50,7 +59,6 @@ namespace WpfApplication1
         }
         public override void OnNext(Persoon value)
         {
-            System.Diagnostics.Debug.Write(value.groep + "" + filter);
             if (value.groep == filter)
             {
                 base.OnNext(value);
@@ -73,7 +81,8 @@ namespace WpfApplication1
 
             if (nextBirthday> vandaag && nextBirthday < voor )
             {
-                verjaardagen.Items.Add(persoon.toString());
+                //verjaardagen.Items.Add(persoon.toString());
+                base.OnNext(persoon);
             }
         }
 
