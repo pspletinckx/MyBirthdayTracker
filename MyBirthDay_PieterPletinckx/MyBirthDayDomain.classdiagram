@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="58b3de02-ef4e-4d3b-9441-062ffab0e14c" name="MyBirthDayDomain" linkedPackageId="14af4061-44b2-4641-8e53-1eeba9ac393a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="7ad5b3f9-3152-4607-bdd0-83dd823277ae">
+      <profileInstance Id="443335a1-91e2-4fe1-91ca-8cf8d89602fa" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a44237bd-0ece-48c2-a49e-0ad6bd59d3eb">
+      <profileInstance Id="0279816d-133c-440a-96e4-24c33c403d8d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="faafc73c-ea6e-46ec-816b-b7acf4597aad" name="Persoon" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0dd51357-cd2c-4095-afb0-bf8d423c28d0" />
+        <targetEnds>
+          <association Id="db1691a0-256b-459f-95c0-bf76ec99f4f7" isDerived="false" sourceEndRoleName="behoort tot" targetEndRoleName="Groep" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b8394b55-e182-4b32-b135-b70de32aac74" LastKnownName="Groep" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f90f06e-dfc9-4d98-9459-9f89cd545db9" name="behoort tot" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f67192eb-883f-4502-99df-b1f8ff2da405" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3a169833-92cc-45f3-93e6-dd9add6fc600" name="Groep" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="92c43cd8-c93f-4c70-9077-9599663847cc" name="Lower" value="0">
+                      <elementDefinition Id="720724ac-95a4-48f9-8eb8-94a1f618a663" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="9d5818bd-511c-422e-9d1c-bee05542a55e" name="Upper" value="N">
+                      <elementDefinition Id="7770c068-65c5-4a8c-894b-8e60cbd47a09" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="9606a4e3-73c8-4349-86b0-b581d7452a1d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3333bf00-a4b4-44c2-9195-ff9e16c4de8c" />
+          </association>
+          <association Id="5b31f90b-6b02-4187-9086-5d7629033f04" isDerived="false" sourceEndRoleName="Persoon" targetEndRoleName="heeft een" isLeaf="false" isAbstract="false">
+            <classMoniker Id="973edc4a-82c9-4bad-898d-60d2174c6303" LastKnownName="Foto" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e46fc157-4a8a-4d4c-9175-54d46f9e09d5" name="Persoon" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e6a9c54b-2936-4fea-b2ae-fdcbe2e40042" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d9375ba4-cdee-49b7-85fb-a9041727e49b" name="heeft een" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="36686365-3b15-48ec-bcf4-a0df2d79dd7d" name="Lower" value="0">
+                      <elementDefinition Id="217176d4-14e5-4b63-a75e-3bf0d36dc5e6" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="6eb0f37a-cc7e-453e-990c-311c6e995c81" name="Upper" value="1">
+                      <elementDefinition Id="b1372573-74bd-47c3-a357-d90976a856ce" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7fc2c8ce-c5dc-4066-95d9-1f838eaeadc2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="932b1e99-9bc8-4428-a7da-81a31690e03d" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="1b3c8c00-f071-4ab8-bab8-bab5ba7a67c5" name="achternaam" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="042c9a23-4dc4-4f8d-99d1-4ae082f6f732" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="62a796ad-6065-40a2-b1d5-be8a28f3fd5d" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="3a82c02a-78a5-4f3b-8ccc-76f6bf17b835" name="voornaam" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c9fb25eb-3933-4e65-8f92-2d2c493984ea" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="62a796ad-6065-40a2-b1d5-be8a28f3fd5d" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="1e1f834c-c3fa-4ea2-87db-3b939a17c130" name="geboortedatum" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="42089beb-5fcc-4167-8d95-b3e4550670aa" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="63cb7840-c443-4315-8c62-69d1fe8ddc0e" LastKnownName="Datum" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="f169e5e5-7918-4b19-91fc-5272fbc3c916" name="getNextBirthday" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eefb20b0-4fe4-4df3-9eed-5ab8a6afb730" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2f653561-57b5-4a47-a42e-890698e44c33" direction="Return" isUnique="false">
+                  <elementDefinition Id="62b8bb08-4128-408d-90dc-9c8fbf8c3e1a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63cb7840-c443-4315-8c62-69d1fe8ddc0e" LastKnownName="Datum" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a504676a-9626-4f5d-b0ba-e5f7c542868c" name="getNextBirthdayAge" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9ef4f1d3-4c40-4bc0-a2b6-857561bd65f2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4204de65-95f1-47ad-b006-246ef982c4a6" direction="Return" isUnique="false">
+                  <elementDefinition Id="7d5facc7-53f3-43a1-ac98-bba2818ae162" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ce3d4018-4cb4-4fc6-8b96-95114b6ad92c" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b8394b55-e182-4b32-b135-b70de32aac74" name="Groep" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="276af245-1c87-46ef-ad72-8418a76c6aa2" />
+        <ownedAttributesInternal>
+          <property Id="ed80e09e-6b43-486f-bd0a-f55573163778" name="groepNaam" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="483a94d7-9bbb-49fc-846a-7c6fd27206ec" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="62a796ad-6065-40a2-b1d5-be8a28f3fd5d" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="62a796ad-6065-40a2-b1d5-be8a28f3fd5d" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="63cb7840-c443-4315-8c62-69d1fe8ddc0e" name="Datum" isAbstract="false" isLeaf="false" cachedFullName="Datum">
+        <elementDefinition Id="b08a18ab-5eb0-40d2-99bc-cd41d5526d11" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d0e9aece-0c36-4c10-8fb2-a0ea50edad04" name="Verjaardagen" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="966d721f-0129-4505-9ab7-8251f5c87537" />
+        <suppliersInternal>
+          <interfaceRealization Id="e0d9a31d-f3bb-40ed-ba93-1f8b1ceb77de">
+            <interfaceMoniker Id="c9905d1e-41e0-4487-82bb-644b531b787a" LastKnownName="Observable" />
+            <elementDefinition Id="c777f332-cedb-4731-868f-ed371a4e4396" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="d49f11d5-852d-4dd1-b9e0-58e7df932d35" isDerived="false" sourceEndRoleName="Bevat" targetEndRoleName="Persoon" isLeaf="false" isAbstract="false">
+            <classMoniker Id="faafc73c-ea6e-46ec-816b-b7acf4597aad" LastKnownName="Persoon" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4231d954-d12e-434e-aa59-80404e539195" name="Bevat" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="068317a7-e8db-4795-880b-af96aeace5be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fbc28270-c999-46ce-a639-0979a1aabf13" name="Persoon" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="d6c1b84c-cf2d-434d-a263-dacbdbf1db37" name="Lower" value="0">
+                      <elementDefinition Id="af32b808-2804-41fa-ba25-8b1d5dc12f38" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4e3b9fef-7c1d-4bdc-958a-dad4b0868da6" name="Upper" value="N">
+                      <elementDefinition Id="8a1b0651-1145-4f90-8021-4891fa0b7918" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b5152a4f-0b1a-4998-b78f-3e363d8f97c0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="eb5ad496-aac2-47a1-b625-9e3dc3c3a087" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="1349aebc-19c4-4e9a-82f2-48d6200bca59" name="verjaardagen" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3e4095fc-c931-4e21-9d3f-cc9e22961a33" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a7c57cd1-dee9-43d0-96b9-6d2370cd6978" LastKnownName="List &lt;Persoon&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d8263904-e2b4-4174-9e01-bae44c9d5718" name="subscribe" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b98148f-faab-4abe-b7fd-f0eb6362550f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="79d19976-3ef4-45ec-be07-c312961faf66" name="Observer" direction="In" isUnique="false">
+                  <elementDefinition Id="8b1cc35b-4023-405f-99d8-065e751d6101" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4ef7c857-32f1-4bc5-a7f9-46b9604b96dd" name="unsubscribe" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4baaeaa0-6251-42bc-85b6-b9b977a08413" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6927ed1f-a6e0-4031-b008-e1d6c1c5f56e" name="Observer" direction="In" isUnique="false">
+                  <elementDefinition Id="0efced30-fb1d-423f-b7d5-0493f53c494f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f4fbc709-025f-4dab-8de2-86903e3a69f5" name="notify" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="64828195-3247-4860-a5c6-8e445a23d9c1" />
+          </operation>
+          <operation Id="7bad5473-0230-4dda-b5d0-584436d63112" name="voegToe" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b95844bd-656d-497e-b0a9-21a13a0fa1ce" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="696bc5dd-766e-44eb-b2b2-21146f1ed210" name="persoon" direction="In" isUnique="false">
+                  <elementDefinition Id="7dd133e0-0e7e-452e-8ac9-647820c2f8e9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6c1a300a-26b8-47f7-9215-7d5c52b90b43" LastKnownName="Persoon" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="c9905d1e-41e0-4487-82bb-644b531b787a" name="Observable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="76dd8c08-22bb-404d-b376-01945e19f4a6" />
+        <targetEnds>
+          <association Id="dd9b0509-d21f-4381-af2d-e9cc3baab57e" isDerived="false" sourceEndRoleName="houd op de hoogte" targetEndRoleName="observer" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="4d16bcde-fd1a-4493-9691-a162bb7a38c6" LastKnownName="Observer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="75e1d24c-abff-4c8f-9dca-a8587fcd4a64" name="houd op de hoogte" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="daf31d94-2816-43e7-b181-4df38eb522c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="38db6412-1686-416c-b987-79e4f81e8364" name="observer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="8d1cc6b0-aeb3-485f-856a-fad1be62cc88" name="Lower" value="0">
+                      <elementDefinition Id="d41ca83b-aaaf-4304-bcfa-9b398a0d94da" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a8a5c5f3-a0e1-4d6b-870b-b1c8dc0615f2" name="Upper" value="N">
+                      <elementDefinition Id="c778cbd2-dcc0-447b-80e0-dd69c9ea4a44" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c12df825-b7bd-4cab-b0ea-876e16583472" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f44d9e86-ffa8-40e9-9b13-caf8c5c77cb5" />
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property Id="bfbae16a-3bcc-4fb2-be37-d2f115868377" name="observers" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a70fe1c7-7e3e-47fb-a3f4-b524a1a0cc66" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c84b438a-f2a1-4f08-becb-2c2742c66ee2" LastKnownName="List&lt;Observers&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation Id="a5f0b523-b2e9-482f-ae02-48713b743b70" name="subscribe" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0dcbcfe6-2352-443e-bc79-e8df1e961b9d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="32061063-957b-4d61-9548-8bfa7e7badb7" name="Observer" direction="In" isUnique="false">
+                  <elementDefinition Id="24bdebe0-23af-4138-b06b-0e663edd6fb9" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e4402ecc-fb44-41c8-b09f-974aba463c1b" name="unsubscribe" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e4692429-6bb4-4d6d-a78e-2530e01a1bc1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5b9e49b0-9a8e-4b59-b228-84ff84be2096" name="Observer" direction="In" isUnique="false">
+                  <elementDefinition Id="5d255400-92dc-4c92-80fd-5a2c339cfa90" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="546d1dab-91ed-41cc-8173-6de41aa6d483" name="notify" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e23cd6dc-e95c-4cba-8fec-b477249c9e3f" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="4d16bcde-fd1a-4493-9691-a162bb7a38c6" name="Observer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="850d6024-c5c0-4495-b124-ae00dcd6262b" />
+        <ownedOperations>
+          <operation Id="90c54633-bc62-4a25-8a09-209baaad312e" name="update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="baa31ece-2ea0-4307-81cb-bebbff90aae7" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e89e8fe4-30cf-4bae-b1a1-27e1edf5dfc5" name="OverzichtLijst" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="14757954-1185-497b-b423-08329d7e2a09" />
+        <suppliersInternal>
+          <interfaceRealization Id="3cf72697-7ea1-4079-ad13-37a7da5ea3f9">
+            <interfaceMoniker Id="4d16bcde-fd1a-4493-9691-a162bb7a38c6" LastKnownName="Observer" />
+            <elementDefinition Id="153a3958-ce0a-4cf8-b2da-1028a1b3fe03" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="f7aa6932-5591-4e24-960e-9328e876fbe1" name="gefilterdePersonen" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cb167e8f-190e-4051-b06d-a5510ce3f086" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0c71198c-fae3-4ea4-9215-da4e15b664ff" LastKnownName="List &lt;Persoon&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="547cb32a-ae20-456c-af66-a2dc198f305f" name="getFeestVarken" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2e8ccc3c-4f2a-40c7-b48a-44a818743d72" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d71336cd-ed32-40cd-ad93-c3f54a9fd1f2" name="index" direction="In" isUnique="false">
+                  <elementDefinition Id="a245b54d-041f-404b-90c7-a565c6b5f0b1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ce3d4018-4cb4-4fc6-8b96-95114b6ad92c" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1327af5d-b8f2-4dfc-914c-9a698fbf6899" direction="Return" isUnique="false">
+                  <elementDefinition Id="92c7af84-0d64-4a37-81e5-735c49ece048" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6c1a300a-26b8-47f7-9215-7d5c52b90b43" LastKnownName="Persoon" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f4c0f71b-b4f6-4ad1-b862-cce23ba92c3a" name="update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3899abeb-257c-4fe5-9ae4-c4d01773e7ee" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="64fe98c4-4623-407c-860e-1b9218fd91fe" name="BijnaJarig" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a9bd60a5-aad9-4d62-bee6-ad8a68ac4626" />
+        <generalsInternal>
+          <generalization Id="a6410bd4-16aa-48fb-80f1-fb8507d8fb0b" isSubstitutable="false">
+            <classMoniker Id="e89e8fe4-30cf-4bae-b1a1-27e1edf5dfc5" LastKnownName="OverzichtLijst" />
+            <elementDefinition Id="b58a41c0-647d-4b5b-b7e6-55a19c13166e" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="5018f00b-58bc-4e32-a7be-d784b59752ca" name="BijnaJarig" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="99ea7e64-1f11-4007-8f3f-72f7f59d138e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6aa9d806-3ed0-4ac7-b182-64d57998313b" name="lijstUI" direction="In" isUnique="false">
+                  <elementDefinition Id="0e27e49e-1b96-4372-9cd5-8e1029114f55" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5544db96-1801-4366-bacf-a96b443d5fe3" LastKnownName="View" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="81dda426-5f18-4fc0-8ae4-c52d168da500" name="Groep" direction="In" isUnique="false">
+                  <elementDefinition Id="eff6757e-4f81-4c34-942d-0fb4be13c313" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="62a796ad-6065-40a2-b1d5-be8a28f3fd5d" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="093879ab-e31f-4a5e-b452-c12052647477" name="FilterLijst" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e21b8bdb-260b-48c1-964b-4b4f3577437a" />
+        <generalsInternal>
+          <generalization Id="92451ffa-ad8a-4783-9d30-8a93f243e222" isSubstitutable="false">
+            <classMoniker Id="e89e8fe4-30cf-4bae-b1a1-27e1edf5dfc5" LastKnownName="OverzichtLijst" />
+            <elementDefinition Id="97a64159-1ca8-4b7e-8769-f1cbcc5167a4" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="071aaab9-8161-488f-9ab7-cab7184bceeb" isDerived="false" sourceEndRoleName="FilterLijst" targetEndRoleName="gefilterd op groepNaam" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b8394b55-e182-4b32-b135-b70de32aac74" LastKnownName="Groep" />
+            <description>gefiltered op groepnaam</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1d0648a3-1a1d-4a10-985b-c441cce50883" name="FilterLijst" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6bf478c2-1c4d-4f88-8b43-a93ab1913e81" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44b89ed9-7a4e-442e-83c2-0c113c49ae17" name="gefilterd op groepNaam" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="c7335a89-c29d-4a33-b82b-841671c2329a" name="Lower" value="1">
+                      <elementDefinition Id="f98fbabf-0c69-4b10-a551-8984b73a355a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b61dff70-7fe2-4926-a2e2-9b45e4b1176c" name="Upper" value="1">
+                      <elementDefinition Id="7173a784-4cb4-45f1-a014-85bef82054cf" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a41a86da-1539-469a-9375-ae6694ece39d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fb00312b-d658-44c2-8bb5-2cb01340efb2" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="81140e57-e05b-4d21-be71-5f1d3e9d042d" name="filterLijst" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b66db2a-0cbf-45cd-a93a-90e2e1ab1780" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f7d05ac4-dec4-44d6-88af-794bcbfbe9e3" name="lijstUI" direction="In" isUnique="false">
+                  <elementDefinition Id="f1b8f0a3-81df-489f-a955-004ad1ac8689" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5544db96-1801-4366-bacf-a96b443d5fe3" LastKnownName="View" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ae76456a-0f19-4171-9646-fb783ebb2d87" name="groep" direction="In" isUnique="false">
+                  <elementDefinition Id="728db8ea-2b79-4255-9238-adc9d1cbf7ca" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="62a796ad-6065-40a2-b1d5-be8a28f3fd5d" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="ce3d4018-4cb4-4fc6-8b96-95114b6ad92c" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="32c2dccb-6940-4a01-b78a-605bb4572048" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6c1a300a-26b8-47f7-9215-7d5c52b90b43" name="Persoon" isAbstract="false" isLeaf="false" cachedFullName="MyBirthDay_PieterPletinckx::Persoon">
+        <elementDefinition Id="0dd51357-cd2c-4095-afb0-bf8d423c28d0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0c71198c-fae3-4ea4-9215-da4e15b664ff" name="List &lt;Persoon&gt;" isAbstract="false" isLeaf="false" cachedFullName="List &lt;Persoon&gt;">
+        <elementDefinition Id="a1e88fc8-c997-4fc1-ada7-be82da107bbb" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a7c57cd1-dee9-43d0-96b9-6d2370cd6978" name="List &lt;Persoon&gt;" isAbstract="false" isLeaf="false" cachedFullName="List &lt;Persoon&gt;">
+        <elementDefinition Id="a1e88fc8-c997-4fc1-ada7-be82da107bbb" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c84b438a-f2a1-4f08-becb-2c2742c66ee2" name="List&lt;Observers&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Observers&gt;">
+        <elementDefinition Id="7c037208-256d-4eea-9064-77d267806d1f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5544db96-1801-4366-bacf-a96b443d5fe3" name="View" isAbstract="false" isLeaf="false" cachedFullName="View">
+        <elementDefinition Id="7d858dd6-2a7a-45ab-93c5-d33e0e30fa8d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="973edc4a-82c9-4bad-898d-60d2174c6303" name="Foto" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="eae05c8c-c565-47b2-ac61-bd01e7195107" />
+        <ownedAttributesInternal>
+          <property Id="d4f26c1d-1e2e-4d74-9d9f-b0f534829f04" name="uri" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c6741395-4c53-4397-a638-bb6bfc16ac9a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a03a098b-e1f4-4e79-a3f8-48a40ad41e88" LastKnownName="rasterAfbeelding" />
+            </type_NamedElement>
+          </property>
+          <property Id="e2b0e69f-7a50-43bf-af07-367ff237e0e4" name="Attribute1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="07b69260-7364-4c86-a8a7-82c37c7cb75c" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a03a098b-e1f4-4e79-a3f8-48a40ad41e88" name="rasterAfbeelding" isAbstract="false" isLeaf="false" cachedFullName="rasterAfbeelding">
+        <elementDefinition Id="afb524d5-2f20-415c-887a-964d097948c5" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="14af4061-44b2-4641-8e53-1eeba9ac393a" name="MyBirthDay_PieterPletinckx">
+    <elementDefinition Id="f6ae7146-ffa6-4e10-babe-7c8a1d268229" />
+  </package>
+</logicalClassDesignerModel>
