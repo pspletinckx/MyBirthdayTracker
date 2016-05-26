@@ -23,5 +23,10 @@ namespace MyBirthday.BO.ViewModels
         {
             get { return SimpleIoc.Default.GetInstance<OverzichtLijstViewModel>(); }
         }
+
+        public static void Cleanup()
+        {
+
+        }
     }
 }

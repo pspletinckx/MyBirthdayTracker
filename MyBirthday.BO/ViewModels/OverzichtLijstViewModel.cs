@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Galasoft.MvvmLight;
+using GalaSoft.MvvmLight;
 
 namespace MyBirthday.BO.ViewModels
 {
-    class OverzichtLijstViewModel
+    class OverzichtLijstViewModel : ViewModelBase
+
     {
     }
 }

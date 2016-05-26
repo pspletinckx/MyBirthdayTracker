@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,21 @@ using System.Threading.Tasks;
 
 namespace MyBirthday.BO.Models
 {
-    class OverzichtLijst : IObserver<Persoon>
+    class OverzichtLijst : ViewModelBase,IObserver<Persoon>
     {
         
         protected IDisposable cancellation;
-        protected List<Persoon> gefilterdeLijst;
+        protected List<Persoon> _gefilterdeLijst;
 
         public OverzichtLijst()
         {
-            gefilterdeLijst = new List<Persoon>();
+            _gefilterdeLijst = new List<Persoon>();
         }
+        public List <Persoon> GefilterdeLijst
+        {
+            get; set;
+        }
+
         public virtual void Subscribe(Verjaardagen provider)
         {
             cancellation = provider.Subscribe(this);
@@ -23,12 +29,12 @@ namespace MyBirthday.BO.Models
         public virtual void Unsubscribe()
         {
             cancellation.Dispose();
-            gefilterdeLijst.Clear();
+            _gefilterdeLijst.Clear();
             //System.Diagnostics.Debug.Write("unsubscribed");
         }
         public void OnCompleted()
         {
-            gefilterdeLijst.Clear();
+            _gefilterdeLijst.Clear();
         }
 
         public void OnError(Exception error)
@@ -38,12 +44,11 @@ namespace MyBirthday.BO.Models
 
         public virtual void OnNext(Persoon value)
         {
-            verjaardagen.Items.Add(value.toString());
-            gefilterdeLijst.Add(value);
+            _gefilterdeLijst.Add(value);
         }
         internal Persoon getFeestvarken(int selectedIndex)
         {
-            return gefilterdeLijst.ElementAt(selectedIndex);
+            return _gefilterdeLijst.ElementAt(selectedIndex);
         }
     }
 }
