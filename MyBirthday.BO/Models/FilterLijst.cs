@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyBirthday.BO.Models
 {
-    class FilterLijst : OverzichtLijst
+    public class FilterLijst : OverzichtLijst
     {
         private String filter;
 

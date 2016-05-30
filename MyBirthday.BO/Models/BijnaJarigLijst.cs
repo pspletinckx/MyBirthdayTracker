@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyBirthday.BO.Models
 {
-    class BijnaJarigLijst : OverzichtLijst
+    public class BijnaJarigLijst : OverzichtLijst
     {
         private int dagen;
         public BijnaJarigLijst( int dagen) : base()
