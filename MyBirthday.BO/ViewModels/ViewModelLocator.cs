@@ -16,12 +16,12 @@ namespace MyBirthday.BO.ViewModels
             // declaration of Ioc container
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             // registratie van alle Viewmodels
-            SimpleIoc.Default.Register<OverzichtLijstViewModel>();
+            SimpleIoc.Default.Register<MainViewModel>();
         }
 
-        public OverzichtLijstViewModel OverzichLijst
+        public MainViewModel OverzichLijst
         {
-            get { return SimpleIoc.Default.GetInstance<OverzichtLijstViewModel>(); }
+            get { return SimpleIoc.Default.GetInstance<MainViewModel>(); }
         }
 
         public static void Cleanup()

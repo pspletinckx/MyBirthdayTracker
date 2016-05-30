@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyBirthday.BO.Models
 {
-    class OverzichtLijst : ViewModelBase,IObserver<Persoon>
+    public class OverzichtLijst : ViewModelBase,IObserver<Persoon>
     {
         
         protected IDisposable cancellation;
