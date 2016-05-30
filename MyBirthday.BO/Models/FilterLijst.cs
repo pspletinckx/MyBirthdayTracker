@@ -10,7 +10,7 @@ namespace MyBirthday.BO.Models
     {
         private String filter;
 
-        public FilterLijst(ListBox uiLijst, String category) : base(uiLijst)
+        public FilterLijst( String category) : base()
         {
             this.filter = category;
         }

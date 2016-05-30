@@ -7,7 +7,7 @@ using GalaSoft.MvvmLight;
 
 namespace MyBirthday.BO.ViewModels
 {
-    class OverzichtLijstViewModel : ViewModelBase
+    public class OverzichtLijstViewModel : ViewModelBase
 
     {
     }

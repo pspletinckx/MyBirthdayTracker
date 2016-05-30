@@ -9,7 +9,7 @@ namespace MyBirthday.BO.Models
     class BijnaJarigLijst : OverzichtLijst
     {
         private int dagen;
-        public BijnaJarigLijst(ListBox uiLijst, int dagen) : base(uiLijst)
+        public BijnaJarigLijst( int dagen) : base()
         {
             this.dagen = dagen;
         }

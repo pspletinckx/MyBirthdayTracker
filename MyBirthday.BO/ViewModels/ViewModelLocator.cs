@@ -9,7 +9,7 @@ using Microsoft.Practices.ServiceLocation;
 
 namespace MyBirthday.BO.ViewModels
 {
-    class ViewModelLocator
+    public class ViewModelLocator
     {
         static ViewModelLocator()
         {
