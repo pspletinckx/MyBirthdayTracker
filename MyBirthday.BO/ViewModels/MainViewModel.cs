@@ -28,6 +28,7 @@ namespace MyBirthday.BO.ViewModels
             _verjaardagen.VoegVerjaardagToe(Els);
             Persoon Ann = new Persoon("An", "De Brandt", "Algemeen", new DateTime(1920, 4, 24));
             _verjaardagen.VoegVerjaardagToe(Ann);
+            System.Diagnostics.Debug.WriteLine(Ann.toString());
         }
 
         public OverzichtLijst Overzichtlijst

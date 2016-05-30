@@ -19,7 +19,7 @@ namespace MyBirthday.BO.ViewModels
             SimpleIoc.Default.Register<MainViewModel>();
         }
 
-        public MainViewModel OverzichLijst
+        public MainViewModel Main
         {
             get { return SimpleIoc.Default.GetInstance<MainViewModel>(); }
         }
