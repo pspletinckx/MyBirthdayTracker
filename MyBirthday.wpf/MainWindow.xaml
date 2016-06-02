@@ -10,10 +10,23 @@
     <Grid Margin="20px 0px">
         <Button x:Name="newButton" Content="Nieuwe Toevoegen" HorizontalAlignment="Left" Margin="23,27,0,0" VerticalAlignment="Top" Width="191"/>
         
-        <ListBox x:Name="listBox1" ItemsSource="{Binding Overzichtlijst, Mode=OneWay }"
+        <!--
+            <ListBox x:Name="listBox1" ItemsSource="{Binding Overzichtlijst, Mode=OneWay }"
                  HorizontalAlignment="Left" Height="214" Margin="23,60,0,0" VerticalAlignment="Top" Width="191" 
                  SelectionMode="Single"/>
-        
+        -->
+        <ListBox HorizontalAlignment="Left" Height="214" Margin="23,60,0,0" VerticalAlignment="Top" Width="191"
+						 ItemsSource="{Binding Overzichtlijst,Mode=OneWay}">
+            <ListBox.ItemTemplate>
+            <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Persoon.toString(), Mode=OneWay}" />
+                </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+        </ListBox>
+
+
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="249,27,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock x:Name="voornaamBlock" HorizontalAlignment="Left" Margin="365,60,0,0" TextWrapping="Wrap" Text="Achternaam" VerticalAlignment="Top" Width="112"/>
         <TextBlock x:Name="achternaamBlock" HorizontalAlignment="Left" Margin="365,34,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" Width="112"/>
