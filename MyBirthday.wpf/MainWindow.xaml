@@ -9,21 +9,16 @@
         DataContext="{Binding Main, Source={StaticResource Locator}}">
     <Grid Margin="20px 0px">
         <Button x:Name="newButton" Content="Nieuwe Toevoegen" HorizontalAlignment="Left" Margin="23,27,0,0" VerticalAlignment="Top" Width="191"/>
-        
-        <!--
-            <ListBox x:Name="listBox1" ItemsSource="{Binding Overzichtlijst, Mode=OneWay }"
-                 HorizontalAlignment="Left" Height="214" Margin="23,60,0,0" VerticalAlignment="Top" Width="191" 
-                 SelectionMode="Single"/>
-        -->
+
         <ListBox HorizontalAlignment="Left" Height="214" Margin="23,60,0,0" VerticalAlignment="Top" Width="191"
-						 ItemsSource="{Binding Overzichtlijst,Mode=OneWay}">
+						 ItemsSource="{Binding OverzichtLijst.GefilterdeLijst,Mode=OneWay}">
             <ListBox.ItemTemplate>
-            <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Persoon.toString(), Mode=OneWay}" />
-                </StackPanel>
-            </DataTemplate>
-        </ListBox.ItemTemplate>
+                <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding ToString, Mode=OneWay}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
 
 
@@ -39,7 +34,17 @@
             <ComboBoxItem>Vrienden</ComboBoxItem>
             <ComboBoxItem>Familie</ComboBoxItem>
         </ComboBox>
-        <ListBox x:Name="bijnaJarigBox" IsEnabled="False" HorizontalAlignment="Left" Height="120" Margin="249,176,0,0" VerticalAlignment="Top" Width="219"/>
+
+        <ListBox IsEnabled="False" HorizontalAlignment="Left" Height="120" Margin="249,176,0,0" VerticalAlignment="Top" Width="219"
+						 ItemsSource="{Binding BijnaJarigLijst.GefilterdeLijst,Mode=OneWay}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding ToString, Mode=OneWay}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Label x:Name="label" Content="Jarigen komende 7 dagen" HorizontalAlignment="Left" Margin="268,154,0,0" VerticalAlignment="Top"/>
 
     </Grid>

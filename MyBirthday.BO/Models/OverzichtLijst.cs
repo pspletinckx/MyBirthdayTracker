@@ -19,7 +19,7 @@ namespace MyBirthday.BO.Models
         }
         public List <Persoon> GefilterdeLijst
         {
-            get; set;
+            get { return _gefilterdeLijst; } 
         }
 
         public virtual void Subscribe(Verjaardagen provider)

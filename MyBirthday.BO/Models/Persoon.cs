@@ -19,6 +19,13 @@ namespace MyBirthday.BO.Models
         public String achternaam { get; private set; }
         public String groep { get; private set; }
         public DateTime geboortedatum { get; private set; }
+        public String ToString
+        {
+            get
+            {
+                return toString();
+            }
+        }
 
         public String toString()
         {
