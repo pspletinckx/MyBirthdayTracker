@@ -61,7 +61,11 @@ namespace MyBirthday.BO.ViewModels
         public Persoon SelectedPersoon
         {
             get { return _selectedPersoon; }
-            set { _selectedPersoon = value; }
+            set {
+                if (_selectedPersoon == value) return; 
+                _selectedPersoon = value;
+                RaisePropertyChanged(() => SelectedPersoon);
+            }
         }
 
 
