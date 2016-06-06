@@ -72,7 +72,7 @@
                     <literalString
                       Id="7770c068-65c5-4a8c-894b-8e60cbd47a09"
                       name="Upper"
-                      value="N" />
+                      value="1" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -916,16 +916,6 @@
                 LastKnownLocation="MyBirthDay_PieterPletinckx.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="07b69260-7364-4c86-a8a7-82c37c7cb75c"
-            name="Attribute1"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>

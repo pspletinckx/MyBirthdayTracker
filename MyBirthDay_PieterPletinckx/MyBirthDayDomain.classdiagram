@@ -21,7 +21,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="9d5818bd-511c-422e-9d1c-bee05542a55e" name="Upper" value="N">
+                    <literalString Id="9d5818bd-511c-422e-9d1c-bee05542a55e" name="Upper" value="1">
                       <elementDefinition Id="7770c068-65c5-4a8c-894b-8e60cbd47a09" />
                     </literalString>
                   </upperValueInternal>
@@ -473,9 +473,6 @@
             <type_NamedElement>
               <referencedTypeMoniker Id="a03a098b-e1f4-4e79-a3f8-48a40ad41e88" LastKnownName="rasterAfbeelding" />
             </type_NamedElement>
-          </property>
-          <property Id="e2b0e69f-7a50-43bf-af07-367ff237e0e4" name="Attribute1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="07b69260-7364-4c86-a8a7-82c37c7cb75c" />
           </property>
         </ownedAttributesInternal>
       </class>

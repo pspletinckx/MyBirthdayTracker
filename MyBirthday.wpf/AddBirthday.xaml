@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyBirthday.wpf"
         mc:Ignorable="d"
-        Title="AddBirthday" Height="200" Width="300">
+        Title="AddBirthday" Height="200" Width="300"
+        DataContext="{Binding AddBirthday, Source={StaticResource Locator}}">
     <Grid>
         <Button x:Name="opslaanButton" Content="Opslaan" Click="opslaanButton_Click" 
                 HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="75"/>
