@@ -25,5 +25,10 @@ namespace MyBirthday.wpf
             InitializeComponent();
         }
 
+        private void newButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddBirthday window = new AddBirthday();
+            window.Show();
+        }
     }
 }

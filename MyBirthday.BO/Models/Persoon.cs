@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GalaSoft.MvvmLight;
 
 namespace MyBirthday.BO.Models
 {
-    public class Persoon
+    public class Persoon: ViewModelBase
     {
         public Persoon(String voornaam, String achternaam, String groep, DateTime geboortedatum)
         {
@@ -15,17 +16,21 @@ namespace MyBirthday.BO.Models
             this.groep = groep;
             this.geboortedatum = geboortedatum;
         }
+        
         public String voornaam { get; private set; }
         public String achternaam { get; private set; }
         public String groep { get; private set; }
         public DateTime geboortedatum { get; private set; }
-        public String ToString
-        {
-            get
-            {
-                return toString();
+        private Foto _foto;
+        public Foto Foto {
+            get { return _foto; }
+            set {
+                if (_foto == value) return;
+                _foto = value;
+                RaisePropertyChanged(() => Foto);
             }
         }
+        public String ToString{get{return toString();}}
 
         public String toString()
         {
