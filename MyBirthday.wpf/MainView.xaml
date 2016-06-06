@@ -8,7 +8,7 @@
         Title="MainWindow" Height="350" Width="525"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
     <Grid Margin="20px 0px">
-        <Button x:Name="newButton" Content="Nieuwe Toevoegen" HorizontalAlignment="Left" Margin="23,27,0,0" VerticalAlignment="Top" Width="191"/>
+        <Button x:Name="newButton" Content="Nieuwe Toevoegen" HorizontalAlignment="Left" Margin="23,27,0,0" VerticalAlignment="Top" Width="191" Click="newButton_Click"/>
 
         <ListBox HorizontalAlignment="Left" Height="214" Margin="23,60,0,0" VerticalAlignment="Top" Width="191"
 						 ItemsSource="{Binding OverzichtLijst.GefilterdeLijst,Mode=OneWay}"
