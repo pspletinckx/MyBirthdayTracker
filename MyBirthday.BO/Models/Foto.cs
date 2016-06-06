@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyBirthday.BO.Models
 {
-    public class Foto
+    public class Foto:ViewModelBase
     {
         //locatie foto
         private String uri;
@@ -14,7 +15,11 @@ namespace MyBirthday.BO.Models
         public String Uri
         {
             get { return uri; }
-            set { uri = value; }
+            set {
+                if (uri == value) return;
+                uri = value;
+                RaisePropertyChanged(() => Uri);
+            }
         }
         //eventuele bitmap
         //eventuele Meta

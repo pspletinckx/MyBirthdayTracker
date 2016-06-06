@@ -15,11 +15,11 @@
                 HorizontalAlignment="Left" Margin="90,112,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="sluitenButton" Content="Sluiten" Click="sluitenButton_Click"
                 HorizontalAlignment="Left" Margin="170,112,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="voornaamBox" 
-                 HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="achternaamBox" 
-                 HorizontalAlignment="Left" Height="23" Margin="115,10,0,0" TextWrapping="Wrap" Text="Achternaam" VerticalAlignment="Top" Width="130"/>
-        <DatePicker x:Name="datePicker" 
+        <TextBox Text="{Binding NieuwePersoon.voornaam}"
+                 HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
+        <TextBox Text="{Binding NieuwePersoon.achternaam}"
+                 HorizontalAlignment="Left" Height="23" Margin="115,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+        <DatePicker Text="{Binding NieuwePersoon.geboortedatum}"
                     HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="235"/>
 
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="235">

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyBirthday.BO.Models.BijnaJarigLijst" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\BijnaJarigLijst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyBirthday.BO.Models.FilterLijst" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FilterLijst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyBirthday.BO.Models.Foto" Collapsed="true">
+    <Position X="14.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Foto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyBirthday.BO.Models.OverzichtLijst" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAABAAAAACAAAIAAAAAAAAIAAACEAAAQAAAAAAEAAA=</HashCode>
+      <FileName>Models\OverzichtLijst.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyBirthday.BO.Models.Persoon">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACFAAEgBAAAABAAEAAAABAAAAAAACAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\Persoon.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Foto" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MyBirthday.BO.Models.Verjaardagen" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="MyBirthday.BO.Models.Verjaardagen.Unsubscriber&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\Verjaardagen.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAAIAAAAAAAAAAAAAAAAAAAAAQACEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Verjaardagen.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="verjaardagen" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyBirthday.BO.ViewModels.AddBirthdayViewModel">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAQAAAAAAABAAAAAAAAAEA=</HashCode>
+      <FileName>ViewModels\AddBirthdayViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyBirthday.BO.ViewModels.MainViewModel">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <AssociationLine Name="OverzichtLijst" Type="MyBirthday.BO.Models.OverzichtLijst" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="3.993" />
+        <Point X="4.315" Y="3.993" />
+        <Point X="4.315" Y="0.938" />
+        <Point X="6" Y="0.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>KAAAAAAAABAACAAAgAABAAAAAAgAAAAAAAAAAAQAAEA=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BijnaJarigLijst" />
+      <Property Name="OverzichtLijst" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MyBirthday.BO.ViewModels.ViewModelLocator">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelLocator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AddBirthday" />
+      <Property Name="Main" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="MyBirthday.BO.Models.IObserver" Collapsed="true">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\IObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
