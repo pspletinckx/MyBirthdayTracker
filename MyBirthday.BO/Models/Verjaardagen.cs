@@ -16,8 +16,6 @@ namespace MyBirthday.BO.Models
             //dummy data
             observers = new List<IObserver<Persoon>>();
             verjaardagen = new List<Persoon>();
-
-
         }
         public IDisposable Subscribe(IObserver<Persoon> observer)
         {

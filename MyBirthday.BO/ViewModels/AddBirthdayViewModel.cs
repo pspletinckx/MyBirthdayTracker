@@ -10,9 +10,7 @@ namespace MyBirthday.BO.ViewModels
 {
     public class AddBirthdayViewModel : ViewModelBase
     {
-
         private Verjaardagen _verjaardagen;
-
         public Verjaardagen Verjaardagen
         {
             get { return _verjaardagen; }

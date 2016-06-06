@@ -8,6 +8,7 @@
         Title="AddBirthday" Height="200" Width="300"
         DataContext="{Binding AddBirthday, Source={StaticResource Locator}}">
     <Grid>
+        <!--to be refactored for MVVM-->
         <Button x:Name="opslaanButton" Content="Opslaan" Click="opslaanButton_Click" 
                 HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="meerdereButton" Content="Nog een!" Click="meerdereButton_Click" 
