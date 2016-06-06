@@ -20,7 +20,7 @@ namespace MyBirthday.BO.ViewModels
         public MainViewModel()
         {
             _overzichtLijst = new OverzichtLijst(); //adapter
-            _verjaardagen = new Verjaardagen(); //model
+            _verjaardagen = Verjaardagen.getInstanceOf();
             _overzichtLijst.Subscribe(_verjaardagen);  //binding
 
             _bijnaJarigLijst = new BijnaJarigLijst(7); //7 dagen

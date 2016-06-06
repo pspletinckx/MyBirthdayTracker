@@ -8,14 +8,23 @@ namespace MyBirthday.BO.Models
 {
     public class Verjaardagen : IObservable<Persoon>
     {
+        private static Verjaardagen singleton;
         private List<IObserver<Persoon>> observers;
         private List<Persoon> verjaardagen;
 
-        public Verjaardagen()
+        private Verjaardagen()
         {
             //dummy data
             observers = new List<IObserver<Persoon>>();
             verjaardagen = new List<Persoon>();
+        }
+        public static Verjaardagen getInstanceOf()
+        {
+            if (singleton == null)
+            {
+                singleton = new Verjaardagen();
+            }
+            return singleton;
         }
         public IDisposable Subscribe(IObserver<Persoon> observer)
         {
