@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:MyBirthday.wpf"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:MyBirthday.BO.ViewModels;assembly=MyBirthday.BO"
-             StartupUri="MainWindow.xaml"
+             StartupUri="MainView.xaml"
              mc:Ignorable="d">
     <Application.Resources>
         <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />

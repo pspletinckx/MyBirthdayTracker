@@ -11,7 +11,8 @@
         <Button x:Name="newButton" Content="Nieuwe Toevoegen" HorizontalAlignment="Left" Margin="23,27,0,0" VerticalAlignment="Top" Width="191"/>
 
         <ListBox HorizontalAlignment="Left" Height="214" Margin="23,60,0,0" VerticalAlignment="Top" Width="191"
-						 ItemsSource="{Binding OverzichtLijst.GefilterdeLijst,Mode=OneWay}">
+						 ItemsSource="{Binding OverzichtLijst.GefilterdeLijst,Mode=OneWay}"
+                         SelectedItem="{Binding SelectedPersoon,Mode=TwoWay}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -21,11 +22,15 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-
+        <!--details-->
+        
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="249,27,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBlock x:Name="voornaamBlock" HorizontalAlignment="Left" Margin="365,60,0,0" TextWrapping="Wrap" Text="Achternaam" VerticalAlignment="Top" Width="112"/>
-        <TextBlock x:Name="achternaamBlock" HorizontalAlignment="Left" Margin="365,34,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" Width="112"/>
-        <TextBlock x:Name="geboorteDatumBlock" HorizontalAlignment="Left" Margin="365,87,0,0" TextWrapping="Wrap" Text="DD/MM/YYYY" VerticalAlignment="Top" Width="112"/>
+        <TextBlock HorizontalAlignment="Left" Margin="365,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"
+                   Text="{Binding SelectedPersoon.achternaam}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="365,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"
+                   Text="{Binding SelectedPersoon.voornaam}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="365,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"
+                   Text="{Binding SelectedPersoon.geboortedatum,StringFormat=dd MMMM yyyy}"/>
         <ComboBox x:Name="comboBox" 
                   HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="191"  
                    >

@@ -31,7 +31,10 @@ namespace MyBirthday.BO.ViewModels
             Persoon Els = new Persoon("Els", "De Visser", "Vrienden", new DateTime(1960, 6, 10));
             _verjaardagen.VoegVerjaardagToe(Els);
             Persoon Ann = new Persoon("An", "De Brandt", "Algemeen", new DateTime(1920, 4, 24));
-            _verjaardagen.VoegVerjaardagToe(Ann);          
+            _verjaardagen.VoegVerjaardagToe(Ann);
+
+            //test
+            SelectedPersoon = Els;    
             
         }
 

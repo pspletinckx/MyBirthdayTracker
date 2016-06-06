@@ -17,11 +17,16 @@ namespace MyBirthday.BO.ViewModels
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             // registratie van alle Viewmodels
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<AddBirthdayViewModel>();
         }
 
         public MainViewModel Main
         {
             get { return SimpleIoc.Default.GetInstance<MainViewModel>(); }
+        }
+        public AddBirthdayViewModel AddBirthday
+        {
+            get { return SimpleIoc.Default.GetInstance<AddBirthdayViewModel>(); }
         }
 
         public static void Cleanup()

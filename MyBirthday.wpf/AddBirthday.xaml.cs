@@ -10,19 +10,33 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MyBirthday.wpf
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddBirthday.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddBirthday : Window
     {
-        public MainWindow()
+        public AddBirthday()
         {
             InitializeComponent();
+        }
+
+        private void opslaanButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void meerdereButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sluitenButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -67,6 +67,7 @@
     <Compile Include="Models\Persoon.cs" />
     <Compile Include="Models\OverzichtLijst.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AddBirthdayViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
   </ItemGroup>
