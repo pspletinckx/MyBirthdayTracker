@@ -8,9 +8,9 @@ namespace MyBirthday.BO.Models
 {
     public class FilterLijst : OverzichtLijst
     {
-        private String filter;
+        private Groep filter;
 
-        public FilterLijst( String category) : base()
+        public FilterLijst( Groep category) : base()
         {
             this.filter = category;
         }

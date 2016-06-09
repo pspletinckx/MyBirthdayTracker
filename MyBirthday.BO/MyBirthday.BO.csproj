@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Models\BijnaJarigLijst.cs" />
     <Compile Include="Models\Foto.cs" />
+    <Compile Include="Models\Groep.cs" />
     <Compile Include="Models\Verjaardagen.cs" />
     <Compile Include="Models\FilterLijst.cs" />
     <Compile Include="Models\IObserver.cs" />

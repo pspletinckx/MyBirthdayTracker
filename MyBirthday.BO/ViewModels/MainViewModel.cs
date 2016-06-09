@@ -22,6 +22,7 @@ namespace MyBirthday.BO.ViewModels
             _overzichtLijst = new OverzichtLijst(); //adapter
             _verjaardagen = Verjaardagen.getInstanceOf();
             _overzichtLijst.Subscribe(_verjaardagen);  //binding
+            beschikbareGroepen = Groep.BeschikbareGroepen;
 
             _bijnaJarigLijst = new BijnaJarigLijst(7); //7 dagen
             _bijnaJarigLijst.Subscribe(_verjaardagen); //bind
@@ -32,7 +33,8 @@ namespace MyBirthday.BO.ViewModels
             _verjaardagen.VoegVerjaardagToe(Els);
             Persoon Ann = new Persoon("An", "De Brandt", "Algemeen", new DateTime(1920, 4, 24));
             _verjaardagen.VoegVerjaardagToe(Ann);
-
+            Persoon Josefien = new Persoon("Josefien", "De Brandt", "Algemeen", new DateTime(1920, 4, 24));
+            _verjaardagen.VoegVerjaardagToe(Josefien);
             //test
             SelectedPersoon = Els;    
             
@@ -82,6 +84,15 @@ namespace MyBirthday.BO.ViewModels
                 RaisePropertyChanged(() => SelectedPersoon);
             }
         }
+
+        private List<Groep> beschikbareGroepen;
+
+        public List<Groep> BeschikbareGroepen
+        {
+            get { return beschikbareGroepen; }
+            set { beschikbareGroepen = value; }
+        }
+
 
 
 

@@ -13,13 +13,13 @@ namespace MyBirthday.BO.Models
         {
             this.voornaam = voornaam;
             this.achternaam = achternaam;
-            this.groep = groep;
+            this.groep = Groep.createNew(groep);
             this.geboortedatum = geboortedatum;
         }
         
         public String voornaam { get; private set; }
         public String achternaam { get; private set; }
-        public String groep { get; private set; }
+        public Groep groep { get; private set; }
         public DateTime geboortedatum { get; private set; }
         private Foto _foto;
         public Foto Foto {
@@ -30,7 +30,8 @@ namespace MyBirthday.BO.Models
                 RaisePropertyChanged(() => Foto);
             }
         }
-        public String ToString{get{return toString();}}
+        public new String ToString
+        { get { return toString(); } }
 
         public String toString()
         {

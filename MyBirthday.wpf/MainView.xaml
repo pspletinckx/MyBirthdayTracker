@@ -32,12 +32,12 @@
         <TextBlock HorizontalAlignment="Left" Margin="365,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"
                    Text="{Binding SelectedPersoon.geboortedatum,StringFormat=dd MMMM yyyy}"/>
         <ComboBox x:Name="comboBox" 
-                  HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="191"  
-                  SelectedValue="{Binding Path=SelectedCategory}" >
-            <ComboBoxItem IsSelected="True">(leeg)</ComboBoxItem>
-            <ComboBoxItem>Algemeen</ComboBoxItem>
-            <ComboBoxItem>Vrienden</ComboBoxItem>
-            <ComboBoxItem>Familie</ComboBoxItem>
+                  HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="191" 
+                  ToolTip="Current rank of the officer" 
+                  ItemsSource="{Binding Path=BeschikbareGroepen}"
+                  DisplayMemberPath="GroepNaam"
+                  SelectedValue="{Binding Path=SelectedCategory}" 
+>
         </ComboBox>
 
         <ListBox IsEnabled="False" HorizontalAlignment="Left" Height="120" Margin="249,176,0,0" VerticalAlignment="Top" Width="219"
