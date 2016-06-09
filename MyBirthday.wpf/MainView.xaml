@@ -33,7 +33,7 @@
                    Text="{Binding SelectedPersoon.geboortedatum,StringFormat=dd MMMM yyyy}"/>
         <ComboBox x:Name="comboBox" 
                   HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="191"  
-                   >
+                  SelectedValue="{Binding Path=SelectedCategory}" >
             <ComboBoxItem IsSelected="True">(leeg)</ComboBoxItem>
             <ComboBoxItem>Algemeen</ComboBoxItem>
             <ComboBoxItem>Vrienden</ComboBoxItem>

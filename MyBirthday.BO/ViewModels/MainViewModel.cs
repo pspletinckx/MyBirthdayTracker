@@ -41,7 +41,10 @@ namespace MyBirthday.BO.ViewModels
         public OverzichtLijst OverzichtLijst
         {
             get { return _overzichtLijst;}
-            set { _overzichtLijst = value;}
+            set {
+                if (value == _overzichtLijst) return;
+                _overzichtLijst = value;
+                RaisePropertyChanged(() => OverzichtLijst); }
         }
 
         public BijnaJarigLijst BijnaJarigLijst
@@ -54,7 +57,19 @@ namespace MyBirthday.BO.ViewModels
         public String  SelectedCategory
         {
             get { return _selectedCategory; }
-            set { _selectedCategory = value; }
+            set {
+                //if (value == "(leeg)" || value ==null)
+                //{
+                //    OverzichtLijst = new OverzichtLijst();
+                //}
+                //else
+                //{
+                //    OverzichtLijst = new FilterLijst(value);
+                //}
+                if (value == _selectedCategory) return;
+                _selectedCategory = value;
+                RaisePropertyChanged(() => SelectedCategory);
+            }
         }
 
        
