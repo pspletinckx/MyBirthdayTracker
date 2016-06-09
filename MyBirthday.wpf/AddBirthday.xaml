@@ -6,15 +6,18 @@
         xmlns:local="clr-namespace:MyBirthday.wpf"
         mc:Ignorable="d"
         Title="AddBirthday" Height="200" Width="300"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         DataContext="{Binding AddBirthday, Source={StaticResource Locator}}">
     <Grid>
         <!--to be refactored for MVVM-->
         <Button x:Name="opslaanButton" Content="Opslaan" Click="opslaanButton_Click" 
-                HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="75"/>
+                HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="75" FontSize="12"/>
         <Button x:Name="meerdereButton" Content="Nog een!" Click="meerdereButton_Click" 
-                HorizontalAlignment="Left" Margin="90,112,0,0" VerticalAlignment="Top" Width="75"/>
+                HorizontalAlignment="Left" Margin="90,112,0,0" VerticalAlignment="Top" Width="75" FontSize="12"/>
         <Button x:Name="sluitenButton" Content="Sluiten" Click="sluitenButton_Click"
-                HorizontalAlignment="Left" Margin="170,112,0,0" VerticalAlignment="Top" Width="75"/>
+                HorizontalAlignment="Left" Margin="170,112,0,0" VerticalAlignment="Top" Width="75" FontSize="12"/>
         <TextBox Text="{Binding NieuwePersoon.voornaam}"
                  HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
         <TextBox Text="{Binding NieuwePersoon.achternaam}"
