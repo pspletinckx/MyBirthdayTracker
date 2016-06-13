@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyBirthday.Communicatie.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

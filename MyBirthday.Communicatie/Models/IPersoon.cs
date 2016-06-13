@@ -1,4 +1,4 @@
-﻿namespace MyBirthday.Communicatie.DataServices
+﻿namespace MyBirthday.Communicatie.Models
 {
     public interface IPersoon
     {

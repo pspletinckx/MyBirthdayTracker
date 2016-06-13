@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
+using MyBirthday.Communicatie.Models;
 
 namespace MyBirthday.BO.Models
 {
-    public class Persoon: ViewModelBase
+    public class Persoon: ViewModelBase, IPersoon
     {
         public Persoon(String voornaam, String achternaam, String groep, DateTime geboortedatum)
         {
@@ -17,7 +18,7 @@ namespace MyBirthday.BO.Models
             this.geboortedatum = geboortedatum;
         }
         
-        public String voornaam { get; private set; }
+        public String voornaam { get; set; }
         public String achternaam { get; private set; }
         public Groep groep { get; private set; }
         public DateTime geboortedatum { get; private set; }
@@ -57,5 +58,13 @@ namespace MyBirthday.BO.Models
             }
             return result;
         }
+        private int _persoonid;
+
+        public int PersoonId
+        {
+            get { return _persoonid; }
+            set { _persoonid = value; }
+        }
+
     }
 }

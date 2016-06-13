@@ -62,6 +62,9 @@
   <ItemGroup>
     <Compile Include="DataServices\DesignDataService.cs" />
     <Compile Include="DataServices\JsonDataService.cs" />
+    <Compile Include="DataServices\XmlDataService.cs" />
+    <Compile Include="Messages\PersoonMessage.cs" />
+    <Compile Include="Messages\UpdatePersoonCollectionMesssage.cs" />
     <Compile Include="Models\BijnaJarigLijst.cs" />
     <Compile Include="Models\Foto.cs" />
     <Compile Include="Models\Groep.cs" />
