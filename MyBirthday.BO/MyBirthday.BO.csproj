@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataServices\DesignDataService.cs" />
+    <Compile Include="DataServices\JsonDataService.cs" />
     <Compile Include="Models\BijnaJarigLijst.cs" />
     <Compile Include="Models\Foto.cs" />
     <Compile Include="Models\Groep.cs" />
@@ -76,6 +78,12 @@
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyBirthday.Communicatie\MyBirthday.Communicatie.csproj">
+      <Project>{450d96cb-08c4-4e73-94d4-012edbcfafbe}</Project>
+      <Name>MyBirthday.Communicatie</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
