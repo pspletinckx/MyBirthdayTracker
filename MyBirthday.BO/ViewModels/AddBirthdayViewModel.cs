@@ -18,15 +18,29 @@ namespace MyBirthday.BO.ViewModels
 
         public Verjaardagen Verjaardagen
         {
-            get { return _verjaardagen; }
-            set { _verjaardagen = value; }
+            get { return _verjaardagen; } //er zijn altijd verjaardagen
+            set {
+                if (_verjaardagen == value) return;
+                _verjaardagen = value;
+                RaisePropertyChanged(() => Verjaardagen); }
         }
         private Persoon nieuwePersoon;
 
         public Persoon NieuwePersoon
         {
-            get { return nieuwePersoon; }
-            set { nieuwePersoon = value; }
+            get {
+                return nieuwePersoon; // don't crash
+                Persoon tempPersoon = new Persoon("Voornaam", "Achternaam", "Algemeen", new DateTime());
+                return tempPersoon;
+
+                return nieuwePersoon ?? (nieuwePersoon = new Persoon("Voornaam","Achternaam","Algemeen", new DateTime())); } //Todo: Dit is een foute manier van een object aan te maken
+
+            set {
+                if (nieuwePersoon == value) return;
+
+                nieuwePersoon = value;
+                RaisePropertyChanged(() => NieuwePersoon);
+            }
         }
     }
 }
