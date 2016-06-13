@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
+using MyBirthday.Communicatie.DataServices;
+using MyBirthday.BO.DataServices;
 
 namespace MyBirthday.BO.ViewModels
 {
@@ -15,6 +17,17 @@ namespace MyBirthday.BO.ViewModels
         {
             // declaration of Ioc container
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+
+            if (ViewModelBase.IsInDesignModeStatic)
+            {
+                //load the DesignDataService
+                SimpleIoc.Default.Register<IDataService, DesignDataService>();
+            }
+            else
+            {
+                //load the DesignDataService
+                SimpleIoc.Default.Register<IDataService, XmlDataService>();
+            }
             // registratie van alle Viewmodels
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<AddBirthdayViewModel>();
