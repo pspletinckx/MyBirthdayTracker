@@ -24,7 +24,8 @@
 
         <!--details-->
         
-        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="249,27,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="image" Loaded="Image_Loaded"
+               HorizontalAlignment="Left" Height="100" Margin="249,27,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock HorizontalAlignment="Left" Margin="365,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"
                    Text="{Binding SelectedPersoon.achternaam}"/>
         <TextBlock HorizontalAlignment="Left" Margin="365,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112"
@@ -33,10 +34,9 @@
                    Text="{Binding SelectedPersoon.geboortedatum,StringFormat=dd MMMM yyyy}"/>
         <ComboBox x:Name="comboBox" 
                   HorizontalAlignment="Left" Margin="23,274,0,0" VerticalAlignment="Top" Width="191" 
-                  ToolTip="Current rank of the officer" 
-                  ItemsSource="{Binding Path=BeschikbareGroepen}"
+                  ItemsSource="{Binding BeschikbareGroepen,Mode=TwoWay}"
+                  SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" 
                   DisplayMemberPath="GroepNaam"
-                  SelectedValue="{Binding Path=SelectedCategory}" 
 >
         </ComboBox>
 

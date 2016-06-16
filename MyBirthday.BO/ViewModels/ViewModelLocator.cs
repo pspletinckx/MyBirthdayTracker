@@ -25,8 +25,8 @@ namespace MyBirthday.BO.ViewModels
             }
             else
             {
-                //load the DesignDataService
-                SimpleIoc.Default.Register<IDataService, XmlDataService>();
+                //load the Run-Time DataService
+                SimpleIoc.Default.Register<IDataService, DesignDataService>();
             }
             // registratie van alle Viewmodels
             SimpleIoc.Default.Register<MainViewModel>();

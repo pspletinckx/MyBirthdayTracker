@@ -25,12 +25,13 @@ namespace MyBirthday.BO.DataServices
         {
             return new List<IPersoon>()
             {
-                new Persoon( "Jantje", "Vermeulen", "Familie", new DateTime(1991, 4, 25)),
-                new Persoon("Els", "De Visser", "Vrienden", new DateTime(1960, 6, 10)),
+                new Persoon( "Sam", "Van Staebroek", "Familie", new DateTime(1991, 7, 12)),
+                new Persoon( "Piet", "Van Staebroek", "Familie", new DateTime(1991, 7, 2)),
+                new Persoon( "Jantje", "Vermeulen", "Familie", new DateTime(1991, 6, 25)),
+                new Persoon("Els", "De Visser", "Vrienden", new DateTime(1960, 6, 20)),
                 new Persoon("An", "De Brandt", "Algemeen", new DateTime(1920, 4, 24)),
                 new Persoon("Josefien", "De Brandt", "Algemeen", new DateTime(1920, 4, 24))
             };
-            throw new NotImplementedException();
         }
 
         public IPersoon GetPersoon(int persoonid)

@@ -14,7 +14,6 @@ namespace MyBirthday.BO.Models
 
         private Verjaardagen()
         {
-            //dummy data
             observers = new List<IObserver<Persoon>>();
             verjaardagen = new List<Persoon>();
         }

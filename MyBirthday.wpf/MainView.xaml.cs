@@ -30,5 +30,17 @@ namespace MyBirthday.wpf
             AddBirthday window = new AddBirthday();
             window.Show();
         }
+        private void Image_Loaded(object sender, RoutedEventArgs e)
+        {
+            BitmapImage b = new BitmapImage();
+            b.BeginInit();
+            b.UriSource = new Uri("c:\\Users\\Pieter\\development\\Ionic\\MoovIt\\www\\img\\adam.jpg");
+            b.EndInit();
+
+            /// ... Get Image reference from sender.
+            var image = sender as Image;
+            // ... Assign Source.
+            image.Source = b;
+        }
     }
 }
