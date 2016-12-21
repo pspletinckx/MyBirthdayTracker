@@ -9,25 +9,28 @@
         DataContext="{Binding AddBirthday, Source={StaticResource Locator}}">
     <Grid>
         <!--to be refactored for MVVM-->
+        
         <Button x:Name="opslaanButton" Content="Opslaan" Click="opslaanButton_Click" 
                 HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="meerdereButton" Content="Nog een!" Click="meerdereButton_Click" 
                 HorizontalAlignment="Left" Margin="90,112,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="sluitenButton" Content="Sluiten" Click="sluitenButton_Click"
                 HorizontalAlignment="Left" Margin="170,112,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox Text="{Binding NieuwePersoon.voornaam}"
+        
+        <!--MVVM form 'NieuwePersoon' -->
+        <TextBox Text="{Binding NieuwePersoon.voornaam, Mode=OneWay}" 
                  HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
-        <TextBox Text="{Binding NieuwePersoon.achternaam}"
+        <TextBox Text="{Binding NieuwePersoon.achternaam, Mode=OneWay}"
                  HorizontalAlignment="Left" Height="23" Margin="115,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
         <DatePicker Text="{Binding NieuwePersoon.geboortedatum}"
                     HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="235"/>
 
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="235">
-            <ComboBoxItem IsSelected="True">(leeg)</ComboBoxItem>
-            <ComboBoxItem>Algemeen</ComboBoxItem>
-            <ComboBoxItem>Vrienden</ComboBoxItem>
-            <ComboBoxItem>Familie</ComboBoxItem>
-        </ComboBox>
+
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="235"
+                  ItemsSource="{Binding BeschikbareGroepen,Mode=TwoWay}"
+                  SelectedItem="{Binding NieuwePersoon.groep, Mode=TwoWay}" 
+                  DisplayMemberPath="GroepNaam"
+></ComboBox>
 
 
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="-149,51,0,0" VerticalAlignment="Top" Width="100"/>

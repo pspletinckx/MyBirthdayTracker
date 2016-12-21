@@ -31,12 +31,12 @@ namespace MyBirthday.wpf
 
         private void meerdereButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void sluitenButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace MyBirthday.Communicatie.Data
 {
     public interface IDataOperations
     {
-        //crud
+        //crud voor viewmodel
         void Save();
         void Search();
         void Save(Guid id);

@@ -98,7 +98,7 @@ namespace MyBirthday.BO.ViewModels
             get { return _selectedCategory; }
             set {
                 Groep.createNew("(leeg)");
-                RaisePropertyChanged(() => BeschikbareGroepen);
+                RaisePropertyChanged(() => BeschikbareGroepen); //Waarom veranderd de view niet?
 
                 if (value.GroepNaam == "(leeg)" || value == null)
                 {

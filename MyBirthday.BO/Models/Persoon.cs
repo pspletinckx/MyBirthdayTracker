@@ -19,9 +19,9 @@ namespace MyBirthday.BO.Models
         }
         
         public String voornaam { get; set; }
-        public String achternaam { get; private set; }
-        public Groep groep { get; private set; }
-        public DateTime geboortedatum { get; private set; }
+        public String achternaam { get; set; }
+        public Groep groep { get; set; }
+        public DateTime geboortedatum { get; set; }
         private Foto _foto;
         public Foto Foto {
             get { return _foto; }

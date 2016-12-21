@@ -11,9 +11,10 @@ namespace MyBirthday.BO.DataServices
 {
     public class DesignDataService : IDataService
     {
+
         public void AddPersoon(IPersoon persoon)
         {
-            throw new NotImplementedException();
+            System.Diagnostics.Debug.WriteLine("Persoon wordt gesaved : " + persoon.ToString());
         }
 
         public bool DeletePersoon(int persoonid)
@@ -23,6 +24,9 @@ namespace MyBirthday.BO.DataServices
 
         public List<IPersoon> GetPersonen()
         {
+            //JsonDataService jsonservice = new JsonDataService();
+            //jsonservice.AddPersoon(GetPersonen().First<IPersoon>());
+
             return new List<IPersoon>()
             {
                 new Persoon( "Sam", "Van Staebroek", "Familie", new DateTime(1991, 7, 12)),

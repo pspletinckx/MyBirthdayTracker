@@ -8,6 +8,7 @@ using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 using MyBirthday.Communicatie.DataServices;
 using MyBirthday.BO.DataServices;
+using MyBirthday.BO.Models;
 
 namespace MyBirthday.BO.ViewModels
 {
