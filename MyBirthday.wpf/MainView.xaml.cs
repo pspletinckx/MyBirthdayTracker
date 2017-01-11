@@ -33,14 +33,14 @@ namespace MyBirthday.wpf
         private void Image_Loaded(object sender, RoutedEventArgs e)
         {
             BitmapImage b = new BitmapImage();
-            b.BeginInit();
-            b.UriSource = new Uri("c:\\Users\\Pieter\\development\\Ionic\\MoovIt\\www\\img\\adam.jpg");
-            b.EndInit();
+            //b.BeginInit();
+            //b.UriSource = new Uri("C:\\Users\\Pieter\\development\\Ionic\\MoovIt\\www\\img\\adam.jpg"); //TODO fix url
+            //b.EndInit();
 
             /// ... Get Image reference from sender.
-            var image = sender as Image;
+            //var image = sender as Image;
             // ... Assign Source.
-            image.Source = b;
+            //image.Source = b;
         }
     }
 }

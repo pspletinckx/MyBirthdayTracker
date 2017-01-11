@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="DataServices\DesignDataService.cs" />
     <Compile Include="DataServices\JsonDataService.cs" />
+    <Compile Include="DataServices\SqlDataService.cs" />
     <Compile Include="DataServices\XmlDataService.cs" />
     <Compile Include="Messages\PersoonMessage.cs" />
     <Compile Include="Messages\UpdatePersoonCollectionMesssage.cs" />
@@ -90,6 +91,10 @@
     <ProjectReference Include="..\MyBirthday.Communicatie\MyBirthday.Communicatie.csproj">
       <Project>{450d96cb-08c4-4e73-94d4-012edbcfafbe}</Project>
       <Name>MyBirthday.Communicatie</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBirthday.DAL\MyBirthday.DAL.csproj">
+      <Project>{5f95db73-d2b9-4546-b001-bce3ae0dccfe}</Project>
+      <Name>MyBirthday.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

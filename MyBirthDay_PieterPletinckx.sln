@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "MyBirthDay_PieterPletinckx", "MyBirthDay_PieterPletinckx\MyBirthDay_PieterPletinckx.modelproj", "{2D7BBEF5-450F-4B59-9D04-36D44C94BF2C}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBirthday.BO", "MyBirthday.BO\MyBirthday.BO.csproj", "{5EA97AE2-7244-401A-804D-DDA9CF27C064}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBirthday.Communicatie", "MyBirthday.Communicatie\MyBirthday.Communicatie.csproj", "{450D96CB-08C4-4E73-94D4-012EDBCFAFBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBirthday.DAL", "MyBirthday.DAL\MyBirthday.DAL.csproj", "{5F95DB73-D2B9-4546-B001-BCE3AE0DCCFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{450D96CB-08C4-4E73-94D4-012EDBCFAFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{450D96CB-08C4-4E73-94D4-012EDBCFAFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{450D96CB-08C4-4E73-94D4-012EDBCFAFBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F95DB73-D2B9-4546-B001-BCE3AE0DCCFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F95DB73-D2B9-4546-B001-BCE3AE0DCCFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F95DB73-D2B9-4546-B001-BCE3AE0DCCFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F95DB73-D2B9-4546-B001-BCE3AE0DCCFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
