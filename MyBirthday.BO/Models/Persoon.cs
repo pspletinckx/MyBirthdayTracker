@@ -17,20 +17,77 @@ namespace MyBirthday.BO.Models
             this.groep = Groep.createNew(groep);
             this.geboortedatum = geboortedatum;
         }
-        
-        public String voornaam { get; set; }
-        public String achternaam { get; set; }
+        #region Retrofitted Legacy Code
+        public String voornaam {
+            get { return Voornaam; }
+            set { Voornaam = value; } }
+
+        public String achternaam {
+            get { return Achternaam; }
+            set { Achternaam = value; }
+        }
         public Groep groep { get; set; }
         public DateTime geboortedatum { get; set; }
+
+        #endregion
+
+
+        #region refactor
+
+        private int _persoonId;
+
+        public int PersoonId
+        {
+            get { return _persoonId; }
+            set { if(_persoonId == value) return;
+                _persoonId = value;
+                RaisePropertyChanged(() => PersoonId);
+            }
+        }
+
+        private String _voornaam;
+
+        public String Voornaam
+        {
+            get { return _voornaam; }
+            set { if(_voornaam == value) return;
+                _voornaam = value;
+                RaisePropertyChanged(() => Voornaam);
+            }
+        }
+
+        private string _achternaam;
+
+        public string Achternaam
+        {
+            get { return _achternaam; }
+            set { _achternaam = value; }
+        }
+
+        private Groep _groep;
+
+        public Groep Groep
+        {
+            get { return _groep; }
+            set { _groep = value; }
+        }
+
+
+
+
         private Foto _foto;
-        public Foto Foto {
+        public Foto Foto
+        {
             get { return _foto; }
-            set {
+            set
+            {
                 if (_foto == value) return;
                 _foto = value;
                 RaisePropertyChanged(() => Foto);
             }
         }
+        #endregion
+        #region public functions
         public new String ToString
         { get { return toString(); } }
 
@@ -58,13 +115,7 @@ namespace MyBirthday.BO.Models
             }
             return result;
         }
-        private int _persoonid;
-
-        public int PersoonId
-        {
-            get { return _persoonid; }
-            set { _persoonid = value; }
-        }
+        #endregion
 
     }
 }

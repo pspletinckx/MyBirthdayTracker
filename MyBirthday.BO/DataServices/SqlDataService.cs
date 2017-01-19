@@ -32,9 +32,9 @@ namespace MyBirthday.BO.DataServices
                                {
                                    voornaam = rij["Firstname"].ToString(),
                                    achternaam = rij["Lastname"].ToString(),
-                                   groep = rij["CategoryId"],
-                                   geboortedatum = rij["DateOfBirth"]
-                               })
+                                   //groep = rij["CategoryId"],
+                                   //geboortedatum = rij["DateOfBirth"]
+                               });
             }
         }
 
